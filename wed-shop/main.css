@@ -7,99 +7,62 @@ body {
 
 header {
     background-color: #2171b2;
-    /* Màu nền của header */
     color: white;
-    /* Màu chữ */
-    padding: 10px 75px 10px 120px;
-    /* Padding cho header */
+    padding: 10px 75px;
     display: flex;
-    /* Sử dụng flexbox để căn chỉnh */
     align-items: center;
-    /* Căn giữa theo chiều dọc */
 }
 
-header img {
-    height: 50px;
-    /* Chiều cao hình ảnh */
-    margin-right: 20px;
-    /* Khoảng cách giữa hình ảnh và tiêu đề */
-}
-
-header .title {
-    display: flex;
-    flex-direction: column;
-    /* Sắp xếp tiêu đề và mô tả theo chiều dọc */
-    margin: 0px;
-    /* Đẩy sang trái để hotline nằm bên phải */
+header a {
+    margin: 0;
 }
 
 header h1 {
     margin: 0;
-    /* Xóa margin cho tiêu đề */
     font-size: 20px;
-    /* Kích thước font cho tiêu đề */
 }
 
 header p {
     margin: 0;
-    /* Xóa margin cho phần mô tả */
     font-size: 16px;
-    /* Kích thước font nhỏ hơn cho phần mô tả */
 }
 
 header .hotline {
     display: flex;
-    /* Sử dụng flexbox cho hotline */
     margin-left: auto;
-    /* Đẩy hotline sang bên phải */
 }
 
 header .hotline1 {
     margin-right: 100px;
-    /* Khoảng cách giữa hotline1 và hotline2 */
 }
 
 header .hotline h4,
 header .hotline p {
     display: flex;
-    margin: 0px;
-    /* Khoảng cách giữa các phần trong hotline */
+    margin: 0;
     text-align: right;
-    /* Căn phải cho nội dung hotline */
 }
 
 .button {
     text-align: center;
-    display: inline-block;
-    /* Để biến nó thành nút */
-    padding: 10px 20px;
-    /* Khoảng cách xung quanh nội dung */
+    padding: 10px;
     background-color: #194c92;
-    /* Màu nền của nút */
     color: white;
-    /* Màu chữ */
     text-decoration: none;
-    /* Bỏ gạch chân */
     border-radius: 32px;
-    /* Bo tròn các góc */
-    font-size: 15px;
-    /* Kích thước chữ */
     margin-left: 150px;
 }
 
 nav {
     background-color: #fff;
     padding: 10px 75px;
-    /* Căn chỉnh cho hợp lý */
     color: black;
-    float: none;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: left;
-    /* Căn trái */
     padding: 0;
     margin: 0;
 }
@@ -117,7 +80,6 @@ nav ul li a {
 nav ul li a:hover {
     border-radius: 5px;
     background-color: #eee;
-    /* Thêm hiệu ứng hover nhẹ */
 }
 
 .banner {
@@ -130,17 +92,34 @@ nav ul li a:hover {
     text-shadow: 2px 2px 5px #000;
 }
 
+.formset {
+    background-color: #2171b2;
+    display: flex;
+
+}
+
+.formset label {
+    font-weight: bold;
+}
+
+.form img {
+    display: flexbox;
+    height: 400px;
+}
+
+.form {
+    border-radius: 30px;
+    margin-left: 100px;
+    padding: 10px 100px 10px 100px;
+    background-color: white;
+}
+
 section {
     background: #fff;
     padding: 20px;
     margin: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-img {
-    max-width: 100%;
-    height: auto;
 }
 
 .dropdown {
@@ -169,4 +148,74 @@ img {
 
 .dropdown-content a:hover {
     background-color: #f1f1f1;
+}
+
+.container {
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container h4 {
+    color: #4475B9;
+    font-size: 13.6px;
+}
+
+.container h2 {
+    font-size: 13.6px;
+}
+
+#location,
+#contact {
+    margin: 0 0 24px;
+    padding: 0 15px;
+    font-size: 13.6px;
+}
+
+#contact p {
+    font-weight: bold;
+    color: black;
+}
+
+#contact a {
+    color: #334862;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+#location {
+    text-align: left;
+}
+
+#location p {
+    color: #777777;
+}
+
+#last {
+    margin-top: auto;
+}
+
+footer p.copyright {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+    color: lightgray;
+}
+
+footer h2 {
+    color: black;
+    font-size: 18px;
+}
+
+footer p {
+    color: black;
+    font-size: 12px;
 }
