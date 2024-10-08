@@ -135,7 +135,11 @@ img {
 
   }
   .phai{
-  width: 600px;
+  min-width: 80%;
+  float:left;
+  }
+  .trai{
+    float:right;
   }
   .img{
     width: 20%;
