@@ -5,25 +5,86 @@ body {
     padding: 0;
 }
 
-header,
-footer {
-    background-color: #004a87;
-    color: #fff;
-    text-align: left;
-    padding: 20px 75px;
-    /* Căn chỉnh header/footer hợp lý */
+header {
+    background-color: #2171b2;
+    /* Màu nền của header */
+    color: white;
+    /* Màu chữ */
+    padding: 10px 75px 10px 120px;
+    /* Padding cho header */
     display: flex;
+    /* Sử dụng flexbox để căn chỉnh */
     align-items: center;
-    justify-content: space-between;
+    /* Căn giữa theo chiều dọc */
 }
 
-header.hotline {
-    text-align: right;
+header img {
+    height: 50px;
+    /* Chiều cao hình ảnh */
+    margin-right: 20px;
+    /* Khoảng cách giữa hình ảnh và tiêu đề */
 }
 
-header h4,
+header .title {
+    display: flex;
+    flex-direction: column;
+    /* Sắp xếp tiêu đề và mô tả theo chiều dọc */
+    margin: 0px;
+    /* Đẩy sang trái để hotline nằm bên phải */
+}
+
+header h1 {
+    margin: 0;
+    /* Xóa margin cho tiêu đề */
+    font-size: 20px;
+    /* Kích thước font cho tiêu đề */
+}
+
 header p {
-    margin: 5px 0;
+    margin: 0;
+    /* Xóa margin cho phần mô tả */
+    font-size: 16px;
+    /* Kích thước font nhỏ hơn cho phần mô tả */
+}
+
+header .hotline {
+    display: flex;
+    /* Sử dụng flexbox cho hotline */
+    margin-left: auto;
+    /* Đẩy hotline sang bên phải */
+}
+
+header .hotline1 {
+    margin-right: 100px;
+    /* Khoảng cách giữa hotline1 và hotline2 */
+}
+
+header .hotline h4,
+header .hotline p {
+    display: flex;
+    margin: 0px;
+    /* Khoảng cách giữa các phần trong hotline */
+    text-align: right;
+    /* Căn phải cho nội dung hotline */
+}
+
+.button {
+    text-align: center;
+    display: inline-block;
+    /* Để biến nó thành nút */
+    padding: 10px 20px;
+    /* Khoảng cách xung quanh nội dung */
+    background-color: #194c92;
+    /* Màu nền của nút */
+    color: white;
+    /* Màu chữ */
+    text-decoration: none;
+    /* Bỏ gạch chân */
+    border-radius: 32px;
+    /* Bo tròn các góc */
+    font-size: 15px;
+    /* Kích thước chữ */
+    margin-left: 150px;
 }
 
 nav {
