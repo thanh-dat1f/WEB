@@ -130,3 +130,14 @@ img {
   .feedback-form button:hover {
     background-color: #004494;
   }
+  .lon{
+    display: flex;
+
+  }
+  .phai{
+    width: 60%;
+  }
+  .img{
+    width: 20%;
+
+  }
