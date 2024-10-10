@@ -155,34 +155,28 @@ img {
   }
   .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Đặt khoảng cách đều giữa form và hình ảnh */
+    align-items: flex-start; /* Căn chỉnh các phần tử theo chiều dọc, đẩy phần tử lên đầu */
     background-color: blue;
     padding: 20px;
+    border-radius: 0px;
+    max-width: 100%;
+}
+
+.feedback-form {
+    width: 50%; /* Form chiếm 50% chiều rộng */
+    padding: 10px; /* Thêm padding để tạo khoảng cách */
+    background-color: white; /* Màu nền trắng để tạo sự tương phản */
     border-radius: 30px;
-    max-width: 100%;
-  }
+}
 
-  .feedback-form {
+.right-image-container {
+    display: flex;
+    justify-content: center; /* Căn giữa hình ảnh trong phần tử bao bọc */
+    align-items: center;
+    width: 40%; /* Hình ảnh chiếm 40% chiều rộng */
+}
 
-    width: 40%;
-    height: 100%;
-    max-width: 60%;
-  }
-
-  .right-image {
-    min-width: 180%;
-   
-  }
-  .foder{
-    width: 60%;
-    height: 100%;
-    min-width: 40%;
-  }
-  .right-image{
-    display: inline-block;
-    height: auto;
-    max-width: 100%;
-    vertical-align: middle;
-  }
- 
+.right-image {
+    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá kích thước của container */
+}
