@@ -66,13 +66,14 @@ nav {
     background-color: #fff;
     padding: 10px 90px 20px;
     color: black;
+    display: flex;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: left;
-    padding: 0;
+    padding: 10px 0;
     margin: 0;
 }
 
@@ -95,7 +96,7 @@ nav ul li a:hover {
 
 .column li a {
     color: #666666D9;
-    font-size: 12.8px;
+    font-size: 11px;
 }
 
 .dropbtn {
@@ -104,6 +105,7 @@ nav ul li a:hover {
 }
 
 .dropdown-content {
+
     display: none;
     /* Ẩn nội dung dropdown */
     position: absolute;
@@ -116,6 +118,11 @@ nav ul li a:hover {
     /* Bóng đổ */
     z-index: 1;
     /* Đảm bảo nằm trên các phần tử khác */
+}
+
+.dropdown-content a {
+    font-size: 11px;
+    color: #666666D9 !important;
 }
 
 .dropdown:hover .dropdown-content {
@@ -154,53 +161,72 @@ nav ul li a:hover {
     /* Màu khi hover */
 }
 
-.slide-show {
-    position: relative;
-    width: 100%;
-    max-width: 1000px;
-    /* Chiều rộng tối đa cho slideshow */
-    margin: auto;
-}
-
 .banner {
     position: relative;
     text-align: center;
     overflow: hidden;
-}
-
-.banner h2 {
-    position: absolute;
-    bottom: 20px;
-    /* Vị trí tiêu đề */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.6);
-    /* Nền mờ cho tiêu đề */
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    /* Bo tròn các góc */
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
 }
 
 .slide-show {
+    display: flex;
+    transition: transform 0.5s ease;
     width: 100%;
-    max-width: 1000px;
-    /* Chiều rộng tối đa cho slideshow */
-    margin: auto;
 }
 
 .list-imgs {
     display: flex;
-    transition: transform 0.5s ease;
-    /* Hiệu ứng chuyển đổi */
+    width: 100%;
 }
 
 .list-imgs img {
     width: 100%;
     height: auto;
-    /* Giữ tỷ lệ hình ảnh */
     max-width: 100%;
-    /* Đảm bảo hình ảnh không vượt quá kích thước khung */
+}
+
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.slide-btn#prevBtn {
+    left: 10px;
+}
+
+.slide-btn#nextBtn {
+    right: 10px;
+}
+
+.slide-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.information {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.information a {
+    color: #334862;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 8px 0;
+}
+
+.information a:hover {
+    color: #ff6f61;
 }
 
 .formset {
