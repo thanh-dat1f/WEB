@@ -153,30 +153,73 @@ img {
   .syt{
     text-decoration: none;
   }
-  .container {
-    display: flex;
-    justify-content: space-between; /* Đặt khoảng cách đều giữa form và hình ảnh */
-    align-items: flex-start; /* Căn chỉnh các phần tử theo chiều dọc, đẩy phần tử lên đầu */
-    background-color: blue;
-    padding: 20px;
-    border-radius: 0px;
-    max-width: 100%;
+ /* Toàn bộ form container */
+.feedback-form-container {
+  display: flex; /* Bố cục ngang */
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4267B2; /* Màu nền */
+  padding-left: 8%;
+  padding-right: 8%;
+  padding-bottom: 1%;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 100%;
+ 
 }
 
+/* Định dạng phần form */
 .feedback-form {
-    width: 50%; /* Form chiếm 50% chiều rộng */
-    padding: 10px; /* Thêm padding để tạo khoảng cách */
-    background-color: white; /* Màu nền trắng để tạo sự tương phản */
-    border-radius: 30px;
+  
+  background-color: white; /* Màu nền của form */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 50%; /* Chiếm 50% chiều rộng */
 }
 
-.right-image-container {
-    display: flex;
-    justify-content: center; /* Căn giữa hình ảnh trong phần tử bao bọc */
-    align-items: center;
-    width: 40%; /* Hình ảnh chiếm 40% chiều rộng */
+.feedback-form h2 {
+  margin-bottom: 20px;
+
 }
 
-.right-image {
-    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá kích thước của container */
+.feedback-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  /* margin-bottom: 15px; */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.feedback-form button {
+  padding: 10px 20px;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.feedback-form button:hover {
+  background-color: #1558b6;
+}
+
+/* Định dạng phần hình ảnh */
+.feedback-image {
+  display: flex;
+  width: 100%; /* Chiếm 40% chiều rộng */
+  justify-content: center;
+  align-items: center;
+}
+
+.feedback-image img {
+  display: flex;
+  max-width: 100%;
+  height: 100%;
 }
