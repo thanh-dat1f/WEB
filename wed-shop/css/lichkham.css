@@ -1,0 +1,38 @@
+.container{
+    display: flex;
+    width: 100%;
+    height:100%;
+  
+}
+.left {
+    flex: 7;
+    background-color: white;
+    margin-left: 50px;
+}
+.right {
+  
+    flex: 3;
+    background-color:white;
+   
+  }
+
+a {
+    display: block; /* Đảm bảo thẻ <a> là phần tử block */
+  }
+  
+a img {
+    max-width: 100%; /* Đảm bảo ảnh không vượt quá kích thước thẻ <a> */
+  }
+  .right-f1{
+    width: 100%;
+    border: solid 1px gray;
+    border-radius: 10px;
+}
+.other-text{
+    margin-right: 230px;
+}
+.right-f2 ,.right-f3, .right-f4 {
+    width: 100%;
+}
+
+ 
