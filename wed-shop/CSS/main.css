@@ -230,6 +230,72 @@ nav ul li a:hover {
   color: #ff6f61;
 }
 
+
+
+.banner2 {
+  position: relative;
+  width: 800px;
+  /* Kích thước tổng thể của slider */
+  max-width: 800px;
+  /* Tăng kích thước tổng thể để vừa với hình ảnh lớn hơn */
+  margin: 0;
+  /* Loại bỏ khoảng cách lề */
+}
+
+.slide-show2 {
+  width: 800px;
+  /* Vùng hiển thị đủ chứa 3 hình */
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.list-imgs2 {
+  display: flex;
+  transition: transform 0.7s ease-in-out;
+  gap: 10px;
+  /* Khoảng cách giữa các hình */
+}
+
+.list-imgs2 img {
+  width: 250px;
+  /* Chiều rộng hình ảnh */
+  height: 150px;
+  /* Chiều cao hình ảnh (có thể điều chỉnh) */
+  object-fit: cover;
+  /* Giữ tỷ lệ khung hình, cắt hình nếu cần */
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.slide-btn2 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#prevBtn2 {
+  left: 0;
+  /* Nút sát lề trái */
+}
+
+#nextBtn2 {
+  right: 0;
+  /* Nút sát lề phải của vùng slide */
+}
+
+.slide-btn2:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
 .formset {
   background-color: #2171b2;
   display: flex;
