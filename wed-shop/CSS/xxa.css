@@ -1,27 +1,39 @@
+
+
 .grid-container{
     display: flex;
-    width: 100%;
-    height:100%;
+    width: 1260px;
+    margin: auto;
+ 
 
 }
 .left-column {
     flex: 7;
     background-color: white;
-  
-    margin-left: 50px;
+    width: 100%;
+     /* Đặt kích thước tối thiểu để không bị thu nhỏ quá mức */
+    flex-shrink: 0; 
+   
 }
 .right-column {
   
     flex: 3;
     background-color: white;
-  
-  }
 
-  .img{
-    max-width: 100%; /* Đặt chiều rộng của ảnh là 200px */
-    margin: 10px 20px 10px 10px;
-    padding-left: 10px;
-  
+}
+
+.left-column img{
+    max-width: 795px;
+    max-height: 1060px;
+   padding:0px 30px 30px 30px;
+   
+}
+/* .right-column img{
+    width: 275px;
+    height: 154.668px;
+} */
+  .right-column img{
+    margin-right: 30%;
   }
 
 a {
@@ -31,18 +43,25 @@ a {
 a img {
     max-width: 100%; /* Đảm bảo ảnh không vượt quá kích thước thẻ <a> */
   }
-
 .right-f1{
-    width: 100%;
+    width:283.400px;
+    height: 247.975px;
+    border-radius: 10px; 
     border: solid 1px gray;
+
+}
+.right-f2 ,.right-f3, .right-f4,.right-f5 {
+    width: 275px;
+    height: 154.668px;
+    object-fit: cover;
+    border: solid 1px gray;
+    overflow: hidden;
     border-radius: 10px;
 }
-.other-text{
-    margin-right: 230px;
-}
-.right-f2 ,.right-f3, .right-f4 {
-    width: 100%;
-}
+/* .other-text{
+  
+} */
+
 .a1{
     width: 100%;
 }
@@ -117,13 +136,11 @@ a img {
 .fourend a{
     text-decoration: none;
 }
-.end1,.end2,.end3,.end4{
-    width: 100%;
-    height: 100%;
-}
+
 .fourendtext{
    margin:  15px 5px 5px 5px;;
 }
+
 
 
 
