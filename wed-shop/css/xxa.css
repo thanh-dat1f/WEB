@@ -101,6 +101,7 @@ a img {
     border-radius: 5px;
  }
  .towend img{
+    
     width: 308px;
     height: 185px;
  }
@@ -114,13 +115,12 @@ a img {
     border-radius: 5px;
  }
  .threeend img{
-    border: solid 1px #4475b9;
-    border-radius: 5px;
+    
     width: 308px;
     height: 185px;
  }
  .threeend a{ 
-    flex: 2.5;
+    flex: 25%;
     text-decoration: none;
 }
 .fourend{
@@ -138,8 +138,11 @@ a img {
 }
 
 .fourendtext{
-   margin:  15px 5px 5px 5px;;
+   margin:  15px 5px 5px 5px;
 }
+
+
+
 
 
 

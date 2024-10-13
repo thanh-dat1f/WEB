@@ -34,5 +34,7 @@ a img {
 .right-f2 ,.right-f3, .right-f4 {
     width: 100%;
 }
-
+.Posted{
+  display: flex;
+}
  
