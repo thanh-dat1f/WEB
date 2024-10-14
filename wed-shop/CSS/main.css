@@ -294,7 +294,111 @@ nav ul li a:hover {
   right: 10px;
 }
 
+.container {
+  display: flex;
+  justify-content: space-between;
+  /* Chia đều khoảng cách giữa các phần */
+  margin: 20px;
+}
 
+.main {
+  width: 70%;
+  /* Chiều rộng của phần chính */
+}
+
+.right-section {
+  width: 30%;
+  margin-left: 20px;
+  /* Khoảng cách giữa phần chính và khối bên phải */
+}
+
+
+.intro {
+  background-color: #F3F4F6;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  /* Giữa trang */
+  max-width: 240px;
+  /* Giới hạn chiều rộng */
+  text-align: center;
+  /* Căn giữa toàn bộ nội dung */
+}
+
+.intro h2 {
+  font-size: 20px;
+  color: #446084;
+  text-align: left;
+  /* Căn giữa tiêu đề */
+  margin: 10px 0;
+  /* Khoảng cách giữa các tiêu đề */
+}
+
+.intro iframe {
+  text-align: center;
+  max-width: 100%;
+}
+
+.notification {
+  margin: 20px 0;
+  /* Khoảng cách phía trên và dưới */
+}
+
+.notification img {
+  max-width: 100%;
+  /* Đảm bảo ảnh không vượt quá chiều rộng của khung */
+  height: auto;
+  /* Tự động điều chỉnh chiều cao */
+  width: 100%;
+  /* Giảm kích thước ảnh xuống 50% */
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  /* Căn giữa các biểu tượng */
+  margin: 20px 0;
+}
+
+.icons img {
+  margin: 0 10px;
+  /* Giảm khoảng cách giữa các biểu tượng */
+  width: 50px;
+  /* Thay đổi kích thước biểu tượng */
+  height: 50px;
+  /* Thay đổi kích thước biểu tượng */
+}
+
+.additional-images {
+  display: flex;
+  flex-direction: column;
+  /* Sắp xếp theo chiều dọc */
+  align-items: center;
+  /* Căn giữa các hình ảnh */
+  margin: 20px 0;
+}
+
+.additional-images img {
+  margin: 10px 0;
+  /* Khoảng cách giữa các hình ảnh */
+  width: 100%;
+  /* Điều chỉnh kích thước hình ảnh */
+  height: auto;
+  /* Tự động điều chỉnh chiều cao */
+}
+
+.link {
+  text-align: center;
+  /* Căn giữa liên kết */
+  margin-top: 10px;
+}
+
+.link a {
+  font-size: 22.4px;
+  text-decoration: none;
+  color: #3498db;
+  font-weight: bold;
+}
 
 .formset {
   background-color: #2171b2;
