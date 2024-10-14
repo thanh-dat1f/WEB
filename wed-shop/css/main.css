@@ -212,7 +212,10 @@ nav ul li a:hover {
 }
 
 .information {
+  margin: 20px;
+}
 
+.information {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -229,88 +232,68 @@ nav ul li a:hover {
   color: #ff6f61;
 }
 
-
-
-.banner2 {
+.banner-container {
   position: relative;
-  width: 780px;
-  /* Điều chỉnh kích thước tổng thể để vừa 3 hình */
-  margin: 0;
+  width: 100%;
+  max-width: 800px;
   overflow: hidden;
-  /* Đảm bảo rằng không có nội dung nào vượt ra khỏi vùng này */
 }
 
-.slide-show2 {
-  width: 780px;
-  /* Cùng kích thước với vùng chứa để tránh bị tràn */
-  overflow: hidden;
-  position: relative;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.list-imgs2 {
+.slideshow {
   display: flex;
-  transition: transform 0.7s ease-in-out;
-  gap: 10px;
-  /* Khoảng cách giữa các hình */
+  transition: transform 0.5s ease-in-out;
 }
 
-.list-imgs2 img {
-  width: 250px;
-  /* Chiều rộng mỗi ảnh */
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
-  flex-shrink: 0;
+.image-list {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
-
-.list-imgs2 p {
+.image-list p {
   font-size: 14px;
   color: #777777;
 }
 
-.list-imgs2 strong {
+.image-list strong {
   padding: 10px 0;
-  /* Tạo khoảng cách trên dưới cho nội dung */
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: -0.5px;
-  /* Khoảng cách giữa các ký tự */
   display: block;
-  /* Chuyển đổi thành block để chiếm toàn bộ chiều rộng */
   text-align: center;
-  /* Căn giữa nội dung chữ */
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
+.slide {
+  display: flex;
+  min-width: 100%;
+  box-sizing: border-box;
+}
 
-.slide-btn2 {
+.slide img {
+  width: calc(100% / 3);
+  height: auto;
+}
+
+.slide-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background-color: rgba(255, 255, 255, 0.8);
   border: none;
   padding: 10px;
   cursor: pointer;
   z-index: 10;
 }
 
-#prevBtn2 {
-  left: 0;
-  /* Nút sát lề trái */
+#previous-button {
+  left: 10px;
 }
 
-#nextBtn2 {
-  right: 0;
-  /* Nút sát lề phải của vùng slide */
+#next-button {
+  right: 10px;
 }
 
-.slide-btn2:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
 
 
 .formset {
@@ -681,7 +664,6 @@ nav ul li a:hover {
 }
 
 .information {
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -692,11 +674,90 @@ nav ul li a:hover {
   color: #334862;
   font-size: 30px;
   text-decoration: none;
-  padding: 8px 0;
+  padding: 5px 0;
+  /* Giảm khoảng cách giữa các link */
 }
 
-.information a:hover {
-  color: #ff6f61;
+.banner2 {
+  position: relative;
+  width: 780px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.slide-show2 {
+  width: 780px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.list-imgs2 {
+  display: flex;
+  transition: transform 0.7s ease-in-out;
+  gap: 10px;
+  /* Khoảng cách giữa các hình */
+}
+
+.list-imgs2 img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.image-list a p:first-of-type {
+  text-align: center;
+  margin: 0;
+  /* Không có margin cho p đầu tiên */
+}
+
+.list-imgs2 p {
+  font-size: 14px;
+  color: #777777;
+  margin: 2px 0;
+  /* Giảm khoảng cách trên và dưới của thẻ p */
+}
+
+.list-imgs2 strong {
+  color: #1f2937;
+  padding: 3px 0;
+  /* Giảm khoảng cách trên dưới cho nội dung strong */
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  display: block;
+  text-align: center;
+  margin: 2px 0;
+  /* Giảm khoảng cách trên và dưới của thẻ strong */
+}
+
+.slide-btn2 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 8px;
+  /* Giảm padding cho nút */
+  cursor: pointer;
+  z-index: 10;
+}
+
+#prevBtn2 {
+  left: 0;
+  /* Nút sát lề trái */
+}
+
+#nextBtn2 {
+  right: 0;
+  /* Nút sát lề phải của vùng slide */
+}
+
+.slide-btn2:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .formset {

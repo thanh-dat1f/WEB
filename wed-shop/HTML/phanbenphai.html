@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu Bệnh viện</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 20px;
+        }
+        .intro {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto; /* Giữa trang */
+            max-width: 240px; /* Giới hạn chiều rộng */
+            text-align: center; /* Căn giữa toàn bộ nội dung */
+        }
+        .intro h2{
+            font-size: 20px;
+            color: #446084;
+            text-align: left; /* Căn giữa tiêu đề */
+            margin: 10px 0; /* Khoảng cách giữa các tiêu đề */
+        }
+        .intro iframe{
+            text-align: center;
+            max-width: 100%;
+        }
+        .notification {
+            margin: 20px 0; /* Khoảng cách phía trên và dưới */
+        }
+        .notification img {
+            max-width: 100%; /* Đảm bảo ảnh không vượt quá chiều rộng của khung */
+            height: auto; /* Tự động điều chỉnh chiều cao */
+            width: 70%; /* Giảm kích thước ảnh xuống 50% */
+        }
+        .icons {
+            display: flex;
+            justify-content: center; /* Căn giữa các biểu tượng */
+            margin: 20px 0;
+        }
+        .icons img {
+            margin: 0 10px; /* Giảm khoảng cách giữa các biểu tượng */
+            width: 50px; /* Thay đổi kích thước biểu tượng */
+            height: 50px; /* Thay đổi kích thước biểu tượng */
+        }
+        .additional-images {
+            display: flex;
+            flex-direction: column; /* Sắp xếp theo chiều dọc */
+            align-items: center; /* Căn giữa các hình ảnh */
+            margin: 20px 0;
+        }
+        .additional-images img {
+            margin: 10px 0; /* Khoảng cách giữa các hình ảnh */
+            width: 100%; /* Điều chỉnh kích thước hình ảnh */
+            height: auto; /* Tự động điều chỉnh chiều cao */
+        }
+        .link {
+            text-align: center; /* Căn giữa liên kết */
+            margin-top: 10px;
+        }
+        .link a {
+            font-size: 22.4px;
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="intro">
+        <div class="notification">
+            <a href=""><img src="/wed-shop/image/icon/thong bao moi chao gia.jpg"></a>
+        </div>
+        <h2>GIỚI THIỆU BỆNH VIỆN</h2>
+        <iframe src="https://youtube.com/embed/RoayVOQfxyM" frameborder="0"></iframe>
+        <h2>KIẾN THỨC CHUYÊN KHOA</h2>
+        <iframe src="https://youtube.com/embed/bjdSkZ_J-6A?list=PLtsDB5HVUkrcDKXNkxtzq-wgXPerhuQUb" frameborder="0"></iframe>
+        <h2>CHƯƠNG TRÌNH 5 PHÚT CÙNG CHUYÊN GIA UNG BƯỚU</h2>
+        <iframe src="https://www.youtube.com/embed/GErB1JpQg0Y" frameborder="0"></iframe>
+
+        <div class="icons">
+            <a href="https://www.facebook.com/BVUNGBUOU.TPHCM"><img src="/wed-shop/image/icon/icon fb.png" alt="Facebook"></a>
+            <a href="https://www.youtube.com/@benhvienungbuouthanhphohochimi"><img src="/wed-shop/image/icon/icon youtube.png" alt="YouTube"></a>
+        </div>
+        <div class="additional-images">
+            <img src="/wed-shop/image/icon/cham soc khach hang.jpg" alt="Chăm sóc khách hàng">
+            <a href=""><img src="/wed-shop/image/icon/ung dung dat kham.jpg" alt="Đặt khám"></a>
+            <img src="/wed-shop/image/icon/so y te hcm.jpg" alt="Sở Y Tế HCM">
+        </div>
+        <div class="link">
+            <a href="">Cổng thông tin Sở Y Tế</a>
+        </div>
+    </div>
+</body>
+</html>
