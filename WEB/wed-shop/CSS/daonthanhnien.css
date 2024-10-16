@@ -1,0 +1,202 @@
+
+.container{
+  display: flex;
+  width: 1260px;
+  margin: auto;
+
+
+}
+.left {
+  flex: 7;
+  background-color: white;
+  width: 100%;
+   /* Đặt kích thước tối thiểu để không bị thu nhỏ quá mức */
+  flex-shrink: 0; 
+ 
+}
+.right {
+
+  flex: 3;
+  background-color: white;
+
+}
+
+.left {
+  max-width: 795px;
+  max-height: 1060px;
+ padding:0px 30px 30px 30px;
+ margin: 0;
+ 
+}
+/* .right-column img{
+  width: 275px;
+  height: 154.668px;
+} */
+.right img{
+  margin-right: 30%;
+}
+
+a {
+  display: block; /* Đảm bảo thẻ <a> là phần tử block */
+}
+
+.right-f1{
+  width:283.400px;
+  height: 247.975px;
+  border-radius: 10px; 
+  border: solid 1px gray;
+
+}
+.right-f2 ,.right-f3, .right-f4,.right-f5 {
+  width: 275px;
+  height: 154.668px;
+  object-fit: cover;
+  border: solid 1px gray;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+
+.Posted{
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: rgb(119, 116, 116);
+}
+.Posted a{
+  text-decoration: none;
+  margin-left: 5px;
+  color: rgb(119, 116, 116);
+
+}
+.cate{
+  font-family: Arial, Helvetica, sans-serif;
+  color:rgb(121, 110, 110);
+  font-size: 12px;
+}
+.a1{
+  width: 100%;
+}
+.end{
+ 
+  display: flex;
+  width: 1260px;
+  margin: auto;
+  padding-left: 10px;
+
+}
+a {
+  display: block; /* Đảm bảo thẻ <a> là phần tử block */
+}
+a img {
+  max-width: 100%; /* Đảm bảo ảnh không vượt quá kích thước thẻ <a> */
+}
+
+.oneend {
+  flex :25%;
+  margin-right: 1%;
+  border: solid 1px gray;
+  border-radius: 5px;
+}
+.oneend img{
+  width: 308px;
+  height: 185px;
+}
+.oneend a{
+  text-decoration: none;
+  
+}
+.towend {
+  flex:25%;
+  margin-right: 1%;
+  border: solid 1px gray;
+  border-radius: 5px;
+}
+.towend img{
+  
+  width: 308px;
+  height: 185px;
+}
+.towend a{
+  text-decoration: none;
+}
+.threeend{
+  flex: 25%;
+  margin-right: 1%;
+  border: solid 1px  #446084;
+  border-radius: 5px;
+}
+.threeend img{
+  
+  width: 308px;
+  height: 185px;
+}
+.threeend a{ 
+  flex: 25%;
+  text-decoration: none;
+}
+.fourend{
+  flex:25%;
+  margin-right: 5%;
+  border: solid 1px gray;
+  border-radius: 5px;
+}
+.fourend img{
+  width: 308px;
+  height: 185px;
+}
+.fourend a{
+  text-decoration: none;
+}
+
+.fourendtext{
+ margin:  15px 5px 5px 5px;
+}
+
+.frist{
+  padding: 0;
+  margin: 2px;
+  text-align: center;
+  font-size: 20;
+  color: gray;
+  line-height: 25px;
+}
+.tow2{
+  padding: 0;
+  margin: 2px;
+  text-align: center;
+  color: gray;
+  line-height: 25px;
+}
+.three{
+  padding: 0;
+  margin: 5px;
+  font-size: 17px;
+  line-height:25px ;
+  color:rgb(121, 110, 110);
+}
+.fourd{
+  padding: 0;
+  margin: 5px;
+  font-size: 17px;
+  line-height:25px ;
+  color:rgb(121, 110, 110);
+}
+.five{
+  padding: 0;
+  margin: 5px;
+  font-size: 17px;
+  line-height:25px ;
+  color:rgb(121, 110, 110);
+}
+body{
+  font-family: Inter, sans-serif;
+  
+}
+
+
+
+
+
+
+ 
