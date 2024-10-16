@@ -64,102 +64,136 @@ header .hotline p {
 }
 
 nav {
-
-  background-color: #fff;
-  padding: 10px 90px 20px;
-  color: black;
-  display: flex;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: left;
-  margin: 0 20px;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
-nav ul li {
-  position: relative;
-  /* Để dropdown hoạt động */
-  margin: 0 10px;
+li {
+  display: inline-block;
 }
 
-nav ul li a {
-  color: black;
-  padding: 15px 20px;
-  text-decoration: none;
-}
-
-nav ul li a:hover {
-  border-radius: 5px;
-  background-color: #eee;
-}
-
-.column li a {
-  color: #666666D9;
-  font-size: 11px;
-}
-
+li a,
 .dropbtn {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 14px;
   font-weight: bold;
-  font-size: 12.8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #004233;
+  color: #ffffff;
+}
+
+li p:hover,
+.dropdown:hover .dropbtn {
+  background-color: #004233;
+  color: #ffffff;
 }
 
 .dropdown-content {
-
   display: none;
-  /* Ẩn nội dung dropdown */
   position: absolute;
-  /* Đặt vị trí tuyệt đối */
-  background-color: white;
-  /* Màu nền */
-  min-width: 200px;
-  /* Chiều rộng tối thiểu cho dropdown */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  /* Bóng đổ */
+  background-color: #ffffff;
+  min-width: 700px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  /* Đảm bảo nằm trên các phần tử khác */
-}
-
-.dropdown-content a {
-  font-size: 11px;
-  color: #666666D9 !important;
+  padding: 20px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(10px);
 }
 
 .dropdown:hover .dropdown-content {
-  display: flex;
-  /* Hiển thị nội dung khi hover */
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.column {
-  padding: 10px;
-  /* Thêm padding cho cột */
+.dropdown-content .column {
+  float: left;
+  width: 25%;
+  padding: 10px 20px;
+  box-sizing: border-box;
 }
 
-.column ul {
-  list-style: none;
-  /* Bỏ gạch đầu dòng */
-  padding: 0;
-  /* Bỏ padding */
-  margin: 0;
-  /* Bỏ margin */
+.dropdown-content .column h3 {
+  font-size: 14px;
+  margin-top: 0;
+  color: #007b5e;
+  border-bottom: 2px solid #007b5e;
+  padding-bottom: 5px;
 }
 
-.column li {
-  margin: 5px 0;
-  /* Thêm khoảng cách giữa các mục */
-}
-
-.column a {
-  color: #666666D9;
-  /* Màu sắc cho liên kết */
+.dropdown-content a {
+  font-size: 13px;
+  color: #333;
+  padding: 8px 0;
   text-decoration: none;
-  /* Bỏ gạch chân */
+  display: block;
+  text-align: left;
+  transition: background-color 0.3s, padding-left 0.3s;
 }
 
-.column a:hover {
-  color: #2171b2;
-  /* Màu khi hover */
+.dropdown-content a:hover {
+  background-color: black;
+  padding-left: 10px;
+}
+
+.dropdown-content p {
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+  padding: 8px 0;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  transition: background-color 0.3s, padding-left 0.3s;
+  margin: 0;
+  cursor: pointer;
+}
+
+.dropdown-content p:hover {
+  background-color: black;
+  padding-left: 10px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media screen and (max-width: 768px) {
+  .dropdown-content {
+    min-width: 100%;
+    box-shadow: none;
+  }
+
+  .dropdown-content .column {
+    width: 100%;
+  }
+
+  li a {
+    font-size: 13px;
+  }
+
+  .dropbtn {
+    padding: 12px 10px;
+  }
 }
 
 .banner {
