@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+nav {
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #004233;
+    color: #ffffff;
+}
+li p:hover, .dropdown:hover .dropbtn {
+    background-color: #004233;
+    color: #ffffff;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 700px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(10px);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-content .column {
+    float: left;
+    width: 25%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.dropdown-content .column h3 {
+    font-size: 14px;
+    margin-top: 0;
+    color: #007b5e;
+    border-bottom: 2px solid #007b5e;
+    padding-bottom: 5px;
+}
+
+.dropdown-content a {
+    font-size: 13px;
+    color: #333;
+    padding: 8px 0;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: background-color 0.3s, padding-left 0.3s;
+}
+.dropdown-content a:hover {
+    background-color: black;
+    padding-left: 10px;
+}
+.dropdown-content p {
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+    padding: 8px 0;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: background-color 0.3s, padding-left 0.3s;
+    margin: 0;
+    cursor: pointer;
+}
+
+.dropdown-content p:hover {
+    background-color: black;
+    padding-left: 10px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 768px) {
+    .dropdown-content {
+        min-width: 100%;
+        box-shadow: none;
+    }
+
+    .dropdown-content .column {
+        width: 100%;
+    }
+
+    li a {
+        font-size: 13px;
+    }
+
+    .dropbtn {
+        padding: 12px 10px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" style="font-size: 14px; font-weight: bold;">Trang chủ</a></li>
+            <li class="dropdown">
+                <a href="/wed-shop/HTML/Trangcon.html" class="dropbtn">Giới thiệu <i class="fa fa-angle-down"></i></a>
+                <div class="dropdown-content clearfix">
+                    <div class="column">
+                        <p>Lời mở đầu</p>
+                        <a href="#">Lịch sử hình thành và phát triển</a>
+                    </div>
+                    <div class="column">
+                        <a href=""><h3>CƠ CẤU TỔ CHỨC</h3></a>
+                        <a href="#">Ban giám đốc bệnh viện</a>
+                        <p>Đảng ủy – Tổ chức đảng</p>
+                        <p>Công đoàn</p>
+                        <p>Đoàn Thanh niên</p>
+                        <a href="#">Các phòng chức năng</a>
+                        <a href="#">Các Khoa Cận lâm sàng</a>
+                        <a href="#">Các Khoa Lâm sàng</a>
+                    </div>
+                </div>  
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Tin tức <i class="fa fa-angle-down"></i></a>
+                <div class="dropdown-content clearfix">
+                    <div class="column">
+                        <a href=""><h3>TIN TỨC HOẠT ĐỘNG BỆNH VIỆN</h3></a>
+                    </div>
+                    <div class="column">
+                        <a href=""><h3>THÔNG TIN TUYỂN DỤNG</h3></a>
+                    </div>
+                    <div class="column">
+                        <a href=""><h3>THÔNG TIN ĐÀO TẠO</h3></a>
+                    </div>
+                    <div class="column">
+                        <h3>THÔNG BÁO MỜI GIÁ</h3>
+                        <a href="">Công nghệ thông tin</a>
+                        <a href="">Hành chính quản trị</a>
+                        <a href="">Khoa dược</a>
+                        <a href="">Tài chính kế toán</a>
+                        <a href="#">Vật tư trang thiết bị y tế</a>
+                        <a href="#">Kỹ thuật phóng xạ</a>
+                        <a href="#">Công tác xã hội</a>
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Dành cho bệnh nhân <i class="fa fa-angle-down"></i></a>
+                <div class="dropdown-content clearfix">
+                    <div class="column">
+                        <h3>CÁC BỆNH LÝ UNG THƯ</h3>
+                        <p>Ung thư Vú</p>
+                        <p>Ung thư Phổi</p>
+                        <p>Ung thư Gan</p>
+                        <p>Ung thư Phụ Khoa</p>
+                        <p>Ung thư Đầu cổ</p>
+                        <p>Ung thư đường tiêu hóa</p>
+                        <p>Ung thư Hệ tiết niệu</p>
+                    </div>
+                    <div class="column">
+                        <h3>BẢNG GIÁ - DỊCH VỤ</h3>
+                        <a href="#">Bảng giá dịch vụ kỹ thuật</a>
+                        <a href="#">Danh mục kỹ thuật</a>
+                    </div>
+                    <div class="column">
+                        <h3>QUY TRÌNH KHÁM BỆNH</h3>
+                        <a href="#">QUY TRÌNH KHÁM BỆNH</a>
+                        <p>Lịch khám bệnh</p>
+                        <h3>THỦ TỤC HÀNH CHÍNH</h3>
+                        <a href="#">Phiếu tóm tắt thông tin điều trị</a>
+                        <a href="#">Quy trình cung cấp hồ sơ bệnh án</a>
+                        <a href="">Quy trình cung cấp bản sao kết quả xét nghiệm cận lâm sàng, Giấy chứng nhận Phẫu thuật/ Thủ thuật</a>
+                        <a href="">Quy trình cấp Giấy xác nhận điều trị tại Bệnh viện Ung bướu</a>
+                        <a href="">Quy trình cấp lại Giấy nghỉ BHXH</a>
+                        <a href="#">Quy trình cấp lại Giấy ra viện</a>
+                    </div>
+                    <div class="column">
+                        <h3>Kết nối yêu thương</h3>
+                        <a href="">Quỹ ngày mai tươi sáng – CN TP.HCM</a>
+                        <a href="">Phòng Công tác xã hội</a>
+                    </div>
+                    <div></div>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Dành cho NVYT <i class="fa fa-angle-down"></i></a>
+                <div class="dropdown-content clearfix">
+                    <div class="column">
+                        <a href=""><h3>CHỈ ĐẠO TUYẾN & ĐÀO TẠO</h3></a>
+                        <a href="#">Bệnh viện/Cơ sở chuyên khoa ung bướu vệ tinh</a>
+                        <a href="#">Đào tạo chuyên khoa</a>
+                        <a href="#">Hợp tác quốc tế</a>
+                        <a href="#">Hội thảo hàng năm Phòng chống Ung thư TPHCM</a>
+                        <a href="#">Chương trình sinh hoạt chuyên đề</a>
+                        <a href="#">Ghi nhận ung thư</a>
+                    </div>
+                    <div class="column">
+                        <a href=""><h3>QUẢN LÝ CHẤT LƯỢNG BỆNH VIỆN</h3></a>
+                        <a href="">Khảo sát hài lòng người bệnh</a>
+                        <a href="">Khảo sát hài lòng nhân viên ý tế</a>
+                        <a href="">Bản Tin an toàn người bệnh</a>
+                        <a href="">Điểm kiểm tra chất lượng bệnh viện</a>
+                        <a href="">Sổ tay chất lượng - Chính sách chất lượng - Mục tiêu chất lượng</a>
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown">
+
+            </li>
+            <li class="column">
+                <strong style="font-size: 14px; padding: 14px 20px; color: black;">Đội ngũ chuyên gia</strong>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
