@@ -265,14 +265,11 @@ li p:hover,
 }
 
 .information {
-  margin: 20px;
-}
-
-.information {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin: 20px;
+  font-size: 30px;
 }
 
 .information a {
@@ -315,10 +312,29 @@ li p:hover,
   flex-shrink: 0;
 }
 
-.image-list a p:first-of-type {
-  text-align: center;
-  margin: 0;
-  /* Không có margin cho p đầu tiên */
+.slide-btn2 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 8px;
+  /* Giảm padding cho nút */
+  cursor: pointer;
+  z-index: 10;
+}
+
+#prevBtn2 {
+  left: 10px;
+}
+
+#nextBtn2 {
+  right: 10px;
+}
+
+.slide-btn2:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .list-imgs2 p {
@@ -340,7 +356,34 @@ li p:hover,
   /* Giảm khoảng cách trên và dưới của thẻ strong */
 }
 
-.slide-btn2 {
+.banner3 {
+  position: relative;
+  width: 780px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slide-show3 {
+  width: 100%;
+  overflow: hidden;
+}
+
+.list-imgs3 {
+  display: flex;
+  transition: transform 0.7s ease-in-out;
+  gap: 10px;
+}
+
+.list-imgs3 img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.slide-btn3 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -348,24 +391,39 @@ li p:hover,
   color: white;
   border: none;
   padding: 8px;
-  /* Giảm padding cho nút */
   cursor: pointer;
   z-index: 10;
 }
 
-#prevBtn2 {
-  left: 0;
-  /* Nút sát lề trái */
+#prevBtn3 {
+  left: 10px;
 }
 
-#nextBtn2 {
-  right: 0;
-  /* Nút sát lề phải của vùng slide */
+#nextBtn3 {
+  right: 10px;
 }
 
-.slide-btn2:hover {
+.slide-btn3:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+.list-imgs3 p {
+  font-size: 14px;
+  color: #777777;
+  margin: 2px 0;
+}
+
+.list-imgs3 strong {
+  color: #1f2937;
+  padding: 3px 0;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  display: block;
+  text-align: center;
+  margin: 2px 0;
+}
+
+
 
 .banner-container {
   position: relative;
