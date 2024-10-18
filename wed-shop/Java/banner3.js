@@ -1,32 +1,28 @@
-let currentIndex3 = 0;
-const slides3 = document.querySelectorAll('.slide-item1'); // Cập nhật selector
-const totalSlides3 = slides3.length;
-const slidesToShow = 3;
+let currentIndex = 0;
+const items = document.querySelectorAll('.slide-item1');
+const totalItems = items.length;
+const itemsPerSlide = 3;
 
-function showSlides3() {
-    const slideShow3 = document.querySelector('.list-imgs3');
-    const offset = currentIndex3 * (250 + 10); // 250px (width) + 10px (gap)
-    slideShow3.style.transform = `translateX(-${offset}px)`; // Di chuyển slide
+function showSlides(index) {
+    items.forEach((item, i) => {
+        item.style.display = (i >= index && i < index + itemsPerSlide) ? 'block' : 'none';
+    });
 }
 
-function nextSlide() {
-    currentIndex3 += 1;
-    if (currentIndex3 > totalSlides3 - slidesToShow) {
-        currentIndex3 = 0; // Quay lại slide đầu
+document.getElementById('nextBtn3').addEventListener('click', function () {
+    currentIndex += itemsPerSlide;
+    if (currentIndex >= totalItems) {
+        currentIndex = 0;
     }
-    showSlides3();
-}
+    showSlides(currentIndex);
+});
 
-function prevSlide() {
-    currentIndex3 -= 1;
-    if (currentIndex3 < 0) {
-        currentIndex3 = totalSlides3 - slidesToShow; // Quay về slide cuối
+document.getElementById('prevBtn3').addEventListener('click', function () {
+    currentIndex -= itemsPerSlide;
+    if (currentIndex < 0) {
+        currentIndex = totalItems - itemsPerSlide;
     }
-    showSlides3();
-}
+    showSlides(currentIndex);
+});
 
-document.getElementById('nextBtn3').addEventListener('click', nextSlide);
-document.getElementById('prevBtn3').addEventListener('click', prevSlide);
-
-// Hiển thị slide đầu tiên
-showSlides3();
+showSlides(currentIndex);

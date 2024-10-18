@@ -423,38 +423,167 @@ li p:hover,
   margin: 2px 0;
 }
 
-
-
-.banner-container {
+.banner4 {
   position: relative;
+  width: 780px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slide-show4 {
   width: 100%;
-  max-width: 800px;
-  margin: auto;
   overflow: hidden;
 }
 
-.slideshow-container {
+.list-imgs4 {
   display: flex;
-  /* Sử dụng flexbox để sắp xếp các phần tử nằm ngang */
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.7s ease-in-out;
+  gap: 10px;
 }
 
-.notification-list {
-  display: flex;
-  /* Đảm bảo danh sách thông báo cũng sử dụng flex */
-  transition: opacity 0.5s ease;
+.list-imgs4 img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
 }
 
-.notification-item {
-  background-color: #f3f4f6;
-  padding: 15px;
-  margin: 10px;
-  /* Thay đổi margin để điều chỉnh khoảng cách */
-  border-radius: 8px;
-  flex: 1;
-  /* Cho phép các thông báo chiếm đều không gian */
-  min-width: 200px;
-  /* Đặt chiều rộng tối thiểu để các phần tử không bị quá nhỏ */
+.slide-btn4 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#prevBtn4 {
+  left: 10px;
+}
+
+#nextBtn4 {
+  right: 10px;
+}
+
+.slide-btn4:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.list-imgs4 p {
+  font-size: 14px;
+  color: #777777;
+  margin: 2px 0;
+}
+
+.list-imgs4 strong {
+  color: #1f2937;
+  padding: 3px 0;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  display: block;
+  text-align: center;
+  margin: 2px 0;
+}
+
+.banner5 {
+  position: relative;
+  width: 780px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slide-show5 {
+  width: 100%;
+  overflow: hidden;
+}
+
+.list-imgs5 {
+  display: flex;
+  transition: transform 0.7s ease-in-out;
+  gap: 10px;
+}
+
+.list-imgs5 img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.slide-btn5 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#prevBtn5 {
+  left: 10px;
+}
+
+#nextBtn5 {
+  right: 10px;
+}
+
+.slide-btn5:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.list-imgs5 p {
+  font-size: 14px;
+  color: #777777;
+  margin: 2px 0;
+}
+
+.list-imgs5 strong {
+  color: #1f2937;
+  padding: 3px 0;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  display: block;
+  text-align: center;
+  margin: 2px 0;
+}
+
+.banner-container {
+  position: relative;
+  width: 780px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.banner-container h3 {
+  font-size: 30px;
+  color: #334862;
+}
+
+.notification-list p {
+  font-size: 14px;
+  color: #777777;
+  margin: 2px 0;
+}
+
+.notification-list strong {
+  color: #1f2937;
+  padding: 3px 0;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  display: block;
+  text-align: center;
+  margin: 2px 0;
 }
 
 .navigation-button {
@@ -464,7 +593,7 @@ li p:hover,
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
-  padding: 10px;
+  padding: 8px;
   cursor: pointer;
   z-index: 10;
 }
@@ -478,28 +607,17 @@ li p:hover,
 }
 
 .navigation-button:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
 }
-
-.image-list strong {
-  padding: 10px 0;
-  font-size: 18px;
-  letter-spacing: -0.5px;
-  display: block;
-  text-align: center;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
 
 .main {
-  width: 70%;
+  width: 65%;
   /* Chiều rộng của phần chính */
 }
 
 .right-section {
   flex: 1;
-  width: 30%;
+  width: 100%;
   margin-bottom: auto;
   margin-left: 20px;
   /* Khoảng cách giữa phần chính và khối bên phải */
@@ -511,7 +629,7 @@ li p:hover,
 }
 
 .notification-item {
-  width: 30%;
+  width: 100%;
   /* Chia đều cho 3 phần */
   text-align: center;
   /* Căn giữa nội dung trong mỗi phần */
@@ -529,7 +647,7 @@ li p:hover,
   padding: 20px;
   margin: 20px auto;
   /* Giữa trang */
-  max-width: 240px;
+  max-width: 300px;
   /* Giới hạn chiều rộng */
   text-align: center;
   /* Căn giữa toàn bộ nội dung */
