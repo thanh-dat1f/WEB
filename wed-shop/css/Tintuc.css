@@ -146,7 +146,7 @@ body{
  color:rgb(121, 110, 110);
 }
 .need {
-    color:rgb(40,116,252) ;
+    color: #3d74c5; 
     margin-left: 8%;
 }
 
@@ -159,6 +159,7 @@ body {
 h1 {
     color: #3d74c5; /* Màu xanh lam cho tiêu đề */
     font-size: 2rem;
+    margin-bottom: 0;
 }
 
 p {
