@@ -16,3 +16,9 @@ document.getElementById('prevBtn').addEventListener('click', function () {
     currentIndex = (currentIndex - 1 + totalImages) % totalImages;
     showImage(currentIndex);
 });
+
+// Tự động chuyển ảnh mỗi 3 giây
+setInterval(function () {
+    currentIndex = (currentIndex + 1) % totalImages;
+    showImage(currentIndex);
+}, 3000); // Thay đổi 3000 thành khoảng thời gian bạn muốn (đơn vị: miligiây)
