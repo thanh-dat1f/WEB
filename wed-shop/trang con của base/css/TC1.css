@@ -1,231 +1,476 @@
+header {
+  background-color: #2171b2;
+  color: white;
+  padding: 10px 120px;
+  display: flex;
+  align-items: center;
+}
 
-.container{
-    display: flex;
-    width: 1260px;
-    margin: auto;
-  
-  
-  }
-  .left {
-    flex: 7;
-    background-color: white;
-    width: 100%;
-     /* Đặt kích thước tối thiểu để không bị thu nhỏ quá mức */
-    flex-shrink: 0; 
-  
-   
-  }
-  .right {
-  
-    flex: 3;
-    background-color: white;
-  
+header a {
+  margin: 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+header p {
+  margin: 0;
+  font-size: 16px;
+}
+
+header .hotline {
+  display: flex;
+  margin-left: auto;
+}
+
+header .hotline1 {
+  font-size: 13.6px;
+  padding: 0px 0px 0px 75px;
+}
+
+header .hotline2 {
+  font-size: 13.6px;
+  padding: 0px 0px 0px 75px;
+}
+
+header .hotline h4,
+header .hotline p {
+  display: flex;
+  margin: 0;
+  text-align: right;
+}
+
+.button {
+  text-align: center;
+  font-size: 13.6px;
+  padding: 12px;
+  background-color: #194c92;
+  color: white;
+  text-decoration: none;
+  border-radius: 32px;
+  margin-left: 150px;
+  display: inline-block;
+  /* Đảm bảo button là một khối nội tuyến */
+}
+
+nav {
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+}
+
+li a,
+.dropbtn {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.column p {
+  font-size: 11px;
+  font-weight: bold;
+  color: black;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #004233;
+  color: #ffffff;
+}
+
+li p:hover,
+.dropdown:hover .dropbtn {
+  background-color: #004233;
+  color: #ffffff;
+}
+
+.dropdown {
+  position: relative;
+  /* Đảm bảo nút dropbtn là phần tử cha */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 800px;
+  min-height: fit-content;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 20px;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+.dropdown-content .column p {
+  font-size: 14px;
+  margin-top: 15px;
+  margin-left: 15px;
+  padding-bottom: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-content .column {
+  float: left;
+  width: 25%;
+  /* Giảm kích thước cột */
+  padding: 10px 15px;
+  /* Điều chỉnh padding giữa các cột */
+  box-sizing: border-box;
+}
+
+.dropdown-content .column h3 {
+  font-size: 14px;
+  margin-top: 0;
+  color: #007b5e;
+  border-bottom: 2px solid #007b5e;
+  padding-bottom: 5px;
+}
+
+.dropdown-content a {
+  font-size: 13px;
+  color: #333;
+  padding: 8px 0;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  transition: background-color 0.3s, padding-left 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: black;
+  padding-left: 10px;
+}
+
+.dropdown-content p {
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+  padding: 8px 0;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  transition: background-color 0.3s, padding-left 0.3s;
+}
+
+.dropdown-content p:hover {
+  background-color: black;
+  padding-left: 10px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media screen and (max-width: 768px) {
+  .dropdown-content {
+    min-width: 100%;
+    box-shadow: none;
   }
 
-  .left img{
+  .dropdown-content .column {
     width: 100%;
   }
-  
-  .left {
-    max-width: 795px;
-    max-height: 1060px;
-   padding:0px 30px 30px 30px;
-   margin: 0;
-   
+
+  li a {
+    font-size: 13px;
   }
-  /* .right-column img{
+
+  .dropbtn {
+    padding: 12px 10px;
+  }
+}
+
+.container {
+  display: flex;
+  width: 1260px;
+  margin: auto;
+
+
+}
+
+.left {
+  flex: 7;
+  background-color: white;
+  width: 100%;
+  /* Đặt kích thước tối thiểu để không bị thu nhỏ quá mức */
+  flex-shrink: 0;
+
+
+}
+
+.right {
+
+  flex: 3;
+  background-color: white;
+
+}
+
+.left img {
+  width: 100%;
+}
+
+.left {
+  max-width: 795px;
+  max-height: 1060px;
+  padding: 0px 30px 30px 30px;
+  margin: 0;
+
+}
+
+/* .right-column img{
     width: 275px;
     height: 154.668px;
   } */
-  .right img{
-    margin-right: 30%;
-  }
-  
-  a {
-    display: block; /* Đảm bảo thẻ <a> là phần tử block */
-  }
-  
-  .right-f1{
-    width:283.400px;
-    height: 247.975px;
-    border-radius: 10px; 
-    border: solid 1px gray;
-  
-  }
-  .right-f2 ,.right-f3, .right-f4,.right-f5 {
-    width: 275px;
-    height: 154.668px;
-    object-fit: cover;
-    border: solid 1px gray;
-    overflow: hidden;
-    border-radius: 10px;
-  }
-  
-  
-  .Posted{
-    display: flex;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 11px;
-    color: rgb(119, 116, 116);
-  }
-  .Posted a{
-    text-decoration: none;
-    margin-left: 5px;
-    color: rgb(119, 116, 116);
-  
-  }
-  .cate{
-    font-family: Arial, Helvetica, sans-serif;
-    color:rgb(121, 110, 110);
-    font-size: 12px;
-  }
-  .a1{
-    width: 100%;
-  }
-  .end{
-   
-    display: flex;
-    width: 1260px;
-    margin: auto;
-    padding-left: 10px;
-  
-  }
-  a {
-    display: block; /* Đảm bảo thẻ <a> là phần tử block */
-  }
-  a img {
-    max-width: 100%; /* Đảm bảo ảnh không vượt quá kích thước thẻ <a> */
-  }
-  
-  .oneend {
-    flex :25%;
-    margin-right: 1%;
-    border: solid 1px gray;
-    border-radius: 5px;
-  }
-  .oneend img{
-    width: 288px;
-    height: 185px;
-  }
-  .oneend a{
-    text-decoration: none;
-    
-  }
-  .towend {
-    flex:25%;
-    margin-right: 1%;
-    border: solid 1px gray;
-    border-radius: 5px;
-  }
-  .towend img{
-    width: 288px;
-    height: 185px;
-  }
-  .towend a{
-    text-decoration: none;
-  }
-  .threeend{
-    flex: 25%;
-    margin-right: 1%;
-    border: solid 1px  #446084;
-    border-radius: 5px;
-  }
-  .threeend img{
-    
-    width: 288px;
-    height: 185px;
-  }
-  .threeend a{ 
-    flex: 25%;
-    text-decoration: none;
-  }
-  .fourend{
-    flex:25%;
-    margin-right: 5%;
-    border: solid 1px gray;
-    border-radius: 5px;
-  }
-  .fourend img{
-    width: 288px;
-    height: 185px;
-  }
-  .fourend a{
-    text-decoration: none;
-  }
-  
-  .fourendtext{
-   margin:  15px 5px 5px 5px;
-  }
-  .textalg{
-    text-align: center;
-    font-weight: bold;
-  }
-  .frist1{
-
-    text-align: center;
-    font-size: 20;
-    color: gray;
-    line-height: 25px;
-  }
-  .frist2{
-   
-  
-    color: gray;
-    line-height: 25px;
-  }
-  .frist3{
-    
-    font-size: 17px;
-    line-height:25px ;
-    color:rgb(121, 110, 110);
-  }
-  .frist4{
-    
-    font-size: 17px;
-    line-height:25px ;
-    color:rgb(121, 110, 110);
-  }
-  .frist5{
-    width: 301px;
-    
-    font-size: 17px;
-    line-height:25px ;
-    color:rgb(121, 110, 110);
-  }
-  .frist6{
-    width: 314px;
-    height: 110px;
-    font-size: 17px;
-    line-height:25px ;
-    color:rgb(121, 110, 110);
-  }
-  body{
-    font-family: Inter, sans-serif;
-    
-  }
-
-
-
-.need{
-    margin-top: 10%;
+.right img {
+  margin-right: 30%;
 }
-.test{
-    margin: 10px;
-    color:rgb(121, 110, 110);
+
+a {
+  display: block;
+  /* Đảm bảo thẻ <a> là phần tử block */
 }
-.end1{
+
+.right-f1 {
+  width: 283.400px;
+  height: 247.975px;
+  border-radius: 10px;
+  border: solid 1px gray;
+
+}
+
+.right-f2,
+.right-f3,
+.right-f4,
+.right-f5 {
+  width: 275px;
+  height: 154.668px;
+  object-fit: cover;
+  border: solid 1px gray;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+
+.Posted {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  color: rgb(119, 116, 116);
+}
+
+.Posted a {
+  text-decoration: none;
+  margin-left: 5px;
+  color: rgb(119, 116, 116);
+
+}
+
+.cate {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(121, 110, 110);
+  font-size: 12px;
+}
+
+.a1 {
+  width: 100%;
+}
+
+.end {
+
+  display: flex;
+  width: 1260px;
+  margin: auto;
+  padding-left: 10px;
+
+}
+
+a {
+  display: block;
+  /* Đảm bảo thẻ <a> là phần tử block */
+}
+
+a img {
+  max-width: 100%;
+  /* Đảm bảo ảnh không vượt quá kích thước thẻ <a> */
+}
+
+.oneend {
+  flex: 25%;
+  margin-right: 1%;
+  border: solid 1px gray;
+  border-radius: 5px;
+}
+
+.oneend img {
+  width: 288px;
+  height: 185px;
+}
+
+.oneend a {
+  text-decoration: none;
+
+}
+
+.towend {
+  flex: 25%;
+  margin-right: 1%;
+  border: solid 1px gray;
+  border-radius: 5px;
+}
+
+.towend img {
+  width: 288px;
+  height: 185px;
+}
+
+.towend a {
+  text-decoration: none;
+}
+
+.threeend {
+  flex: 25%;
+  margin-right: 1%;
+  border: solid 1px #446084;
+  border-radius: 5px;
+}
+
+.threeend img {
+
+  width: 288px;
+  height: 185px;
+}
+
+.threeend a {
+  flex: 25%;
+  text-decoration: none;
+}
+
+.fourend {
+  flex: 25%;
+  margin-right: 5%;
+  border: solid 1px gray;
+  border-radius: 5px;
+}
+
+.fourend img {
+  width: 288px;
+  height: 185px;
+}
+
+.fourend a {
+  text-decoration: none;
+}
+
+.fourendtext {
+  margin: 15px 5px 5px 5px;
+}
+
+.textalg {
+  text-align: center;
+  font-weight: bold;
+}
+
+.frist1 {
+
+  text-align: center;
+  font-size: 20;
+  color: gray;
+  line-height: 25px;
+}
+
+.frist2 {
+
+
+  color: gray;
+  line-height: 25px;
+}
+
+.frist3 {
+
+  font-size: 17px;
+  line-height: 25px;
+  color: rgb(121, 110, 110);
+}
+
+.frist4 {
+
+  font-size: 17px;
+  line-height: 25px;
+  color: rgb(121, 110, 110);
+}
+
+.frist5 {
+  width: 301px;
+
+  font-size: 17px;
+  line-height: 25px;
+  color: rgb(121, 110, 110);
+}
+
+.frist6 {
+  width: 314px;
+  height: 110px;
+  font-size: 17px;
+  line-height: 25px;
+  color: rgb(121, 110, 110);
+}
+
+body {
+  font-family: Inter, sans-serif;
+
+}
+
+
+
+.need {
+  margin-top: 10%;
+}
+
+.test {
+  margin: 10px;
+  color: rgb(121, 110, 110);
+}
+
+.end1 {
   overflow: hidden;
   object-fit: cover;
 }
-.aend{
+
+.aend {
   color: black;
   padding: 0;
   margin-top: 6px;
   margin-bottom: 6px;
   font-family: Inter, sans-serif;
 }
-.oend{
-  color:rgb(121, 110, 110);
+
+.oend {
+  color: rgb(121, 110, 110);
   padding: 0;
   margin: 0;
   font-family: Inter, sans-serif;
@@ -233,8 +478,84 @@
   line-height: 20px;
 }
 
-  
-  
-  
-  
-   
+.container {
+  background-color: #F3F4F6;
+  display: flex;
+  justify-content: flex-start;
+  padding: 30px 0px 0px;
+  margin: 0px 130px;
+  align-items: center;
+}
+
+.container h4 {
+  color: #4475B9;
+}
+
+.container h2 {
+  font-size: 13.6px;
+}
+
+#location,
+#contact {
+  flex: 1;
+  display: block;
+}
+
+#contact p {
+  font-weight: bold;
+  color: black;
+  margin: 0px 0px 8.16px;
+}
+
+#contact a {
+  color: #334862;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+#location {
+  font-size: 13.6px;
+  margin: 0px 0px 24px;
+  text-align: left;
+  padding: 0px 15px;
+}
+
+#location p {
+  color: #777777;
+}
+
+#contact {
+  font-size: 13px;
+  margin: 0px 0px 24px;
+  padding: 0px 15px;
+}
+
+footer p.copyright {
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+footer {
+  background-color: #F3F4F6;
+  color: rgba(0, 0, 0, .5);
+  font-size: 12px;
+  text-align: center;
+}
+
+footer h2 {
+  color: black;
+  font-size: 18px;
+}
+
+footer p {
+  color: black;
+  font-size: 12px;
+  background-color: #F3F4F6;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
