@@ -1,0 +1,6 @@
+917b6dae4901ec2f45caf213f332c472cf36b211 commit	refs/heads/main
+ad89336d290833de9190dbdaaecafe313bbc5388 commit	refs/heads/newbranch
+ba4349030e10d82dac28d559335544e3a4da05ed commit	refs/original/refs/remotes/origin/main
+ba4349030e10d82dac28d559335544e3a4da05ed commit	refs/remotes/origin/HEAD
+ba4349030e10d82dac28d559335544e3a4da05ed commit	refs/remotes/origin/main
+b7098e7524703e07ac6e279ceb1cb604af300158 commit	refs/remotes/origin/newbranch
