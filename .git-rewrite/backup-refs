@@ -1,8 +1,0 @@
-43c81d9e6b55b8648880d80824c98ef23c205b01 commit	refs/heads/main
-ad89336d290833de9190dbdaaecafe313bbc5388 commit	refs/heads/newbranch
-b7098e7524703e07ac6e279ceb1cb604af300158 commit	refs/original/refs/heads/newbranch
-ba4349030e10d82dac28d559335544e3a4da05ed commit	refs/original/refs/remotes/origin/main
-b7098e7524703e07ac6e279ceb1cb604af300158 commit	refs/original/refs/remotes/origin/newbranch
-72623fd64bc686130f8b3f9242ee3972686b084a commit	refs/remotes/origin/HEAD
-72623fd64bc686130f8b3f9242ee3972686b084a commit	refs/remotes/origin/main
-ad89336d290833de9190dbdaaecafe313bbc5388 commit	refs/remotes/origin/newbranch
