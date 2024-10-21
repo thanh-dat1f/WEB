@@ -164,7 +164,7 @@ a img {
 .fourendtext{
    margin:  15px 5px 5px 5px;
 }
-.test{
+/* .test{
    
     font-weight: normal;
    font-family: Arial, Helvetica, sans-serif;
@@ -172,7 +172,7 @@ a img {
     color:rgb(121, 110, 110);
     line-height: 20px;
   
-}
+} */
 
 
 
@@ -230,6 +230,7 @@ a img {
  
 }
 .test{
+    width: 95%;
     padding: 0 20px 0 0 ;
     margin: 13px 40px 0 0;
     color:rgb(121, 110, 110);
@@ -237,12 +238,20 @@ a img {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 23px;
-    white-space: nowrap;
+   
+    white-space: normal; /* Cho phép xuống dòng tự động */
 }
 .test a{
   color: black;
   text-decoration: none;
-  white-space: nowrap;
+  
+}
+.test p{
+  margin-right: 3%;
+ 
+  word-wrap: break-word; /* Tự động xuống dòng khi từ quá dài để vừa với chiều rộng */
+  word-break: break-all; 
+
 }
 .end1{
   overflow: hidden;
