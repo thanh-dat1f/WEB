@@ -91,6 +91,12 @@ li a,
   transition: background-color 0.3s, color 0.3s;
 }
 
+.column p {
+  font-size: 11px;
+  font-weight: bold;
+  color: black;
+}
+
 li a:hover,
 .dropdown:hover .dropbtn {
   background-color: #004233;
@@ -103,18 +109,29 @@ li p:hover,
   color: #ffffff;
 }
 
+.dropdown {
+  position: relative;
+  /* Đảm bảo nút dropbtn là phần tử cha */
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #ffffff;
-  min-width: 700px;
+  min-width: 800px;
+  min-height: fit-content;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
   padding: 20px;
   border-radius: 10px;
   opacity: 0;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  transform: translateY(10px);
+}
+
+.dropdown-content .column p {
+  font-size: 14px;
+  margin-top: 15px;
+  margin-left: 15px;
+  padding-bottom: 5px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -126,7 +143,9 @@ li p:hover,
 .dropdown-content .column {
   float: left;
   width: 25%;
-  padding: 10px 20px;
+  /* Giảm kích thước cột */
+  padding: 10px 15px;
+  /* Điều chỉnh padding giữa các cột */
   box-sizing: border-box;
 }
 
@@ -162,8 +181,6 @@ li p:hover,
   display: block;
   text-align: left;
   transition: background-color 0.3s, padding-left 0.3s;
-  margin: 0;
-  cursor: pointer;
 }
 
 .dropdown-content p:hover {
@@ -195,6 +212,8 @@ li p:hover,
     padding: 12px 10px;
   }
 }
+
+
 
 .banner {
   position: relative;
@@ -246,14 +265,11 @@ li p:hover,
 }
 
 .information {
-  margin: 20px;
-}
-
-.information {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin: 20px;
+  font-size: 30px;
 }
 
 .information a {
@@ -296,10 +312,29 @@ li p:hover,
   flex-shrink: 0;
 }
 
-.image-list a p:first-of-type {
-  text-align: center;
-  margin: 0;
-  /* Không có margin cho p đầu tiên */
+.slide-btn2 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 8px;
+  /* Giảm padding cho nút */
+  cursor: pointer;
+  z-index: 10;
+}
+
+#prevBtn2 {
+  left: 0px;
+}
+
+#nextBtn2 {
+  right: 0px;
+}
+
+.slide-btn2:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .list-imgs2 p {
@@ -321,7 +356,38 @@ li p:hover,
   /* Giảm khoảng cách trên và dưới của thẻ strong */
 }
 
-.slide-btn2 {
+.banner3 {
+  position: relative;
+  width: 780px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slide-show3 {
+  width: 100%;
+  overflow: hidden;
+}
+
+.list-imgs3 {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-item1 {
+  flex: 0 0 33.4%;
+  /* Đảm bảo mỗi ảnh chiếm 1/3 chiều rộng */
+}
+
+.list-imgs3 img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.slide-btn3 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -329,55 +395,207 @@ li p:hover,
   color: white;
   border: none;
   padding: 8px;
-  /* Giảm padding cho nút */
   cursor: pointer;
   z-index: 10;
 }
 
-#prevBtn2 {
-  left: 0;
-  /* Nút sát lề trái */
+#prevBtn3 {
+  left: 0px;
 }
 
-#nextBtn2 {
-  right: 0;
-  /* Nút sát lề phải của vùng slide */
+#nextBtn3 {
+  right: 0px;
 }
 
-.slide-btn2:hover {
+.slide-btn3:hover {
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+.list-imgs3 p {
+  font-size: 14px;
+  color: #777777;
+  margin: 2px 0;
+}
+
+.list-imgs3 strong {
+  color: #1f2937;
+  padding: 3px 0;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  display: block;
+  text-align: center;
+  margin: 2px 0;
+}
+
+.banner4 {
+  position: relative;
+  width: 780px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slide-show4 {
+  width: 100%;
+  overflow: hidden;
+}
+
+.list-imgs4 {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-item2 {
+  flex: 0 0 33.4%;
+  /* Đảm bảo mỗi ảnh chiếm 1/3 chiều rộng */
+}
+
+.list-imgs4 img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.slide-btn4 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#prevBtn4 {
+  left: 0px;
+}
+
+#nextBtn4 {
+  right: 0px;
+}
+
+.slide-btn4:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.list-imgs4 p {
+  font-size: 14px;
+  color: #777777;
+  margin: 2px 0;
+}
+
+.list-imgs4 strong {
+  color: #1f2937;
+  padding: 3px 0;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  display: block;
+  text-align: center;
+  margin: 2px 0;
+}
+
+.banner5 {
+  position: relative;
+  width: 780px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slide-show5 {
+  width: 100%;
+  overflow: hidden;
+}
+
+.list-imgs5 {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-item3 {
+  flex: 0 0 33.4%;
+  /* Đảm bảo mỗi ảnh chiếm 1/3 chiều rộng */
+}
+
+.list-imgs5 img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.slide-btn5 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#prevBtn5 {
+  left: 0px;
+}
+
+#nextBtn5 {
+  right: 0px;
+}
+
+.slide-btn5:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.list-imgs5 p {
+  font-size: 14px;
+  color: #777777;
+  margin: 2px 0;
+}
+
+.list-imgs5 strong {
+  color: #1f2937;
+  padding: 3px 0;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  display: block;
+  text-align: center;
+  margin: 2px 0;
 }
 
 .banner-container {
   position: relative;
-  width: 100%;
-  max-width: 800px;
-  margin: auto;
+  width: 780px;
+  margin: 0;
   overflow: hidden;
+  border-radius: 10px;
 }
 
-.slideshow-container {
-  display: flex;
-  /* Sử dụng flexbox để sắp xếp các phần tử nằm ngang */
-  transition: transform 0.5s ease-in-out;
+.banner-container h3 {
+  font-size: 30px;
+  color: #334862;
 }
 
-.notification-list {
-  display: flex;
-  /* Đảm bảo danh sách thông báo cũng sử dụng flex */
-  transition: opacity 0.5s ease;
+.notification-list p {
+  font-size: 14px;
+  color: #777777;
+  margin: 2px 0;
 }
 
-.notification-item {
-  background-color: #f3f4f6;
-  padding: 15px;
-  margin: 10px;
-  /* Thay đổi margin để điều chỉnh khoảng cách */
-  border-radius: 8px;
-  flex: 1;
-  /* Cho phép các thông báo chiếm đều không gian */
-  min-width: 200px;
-  /* Đặt chiều rộng tối thiểu để các phần tử không bị quá nhỏ */
+.notification-list strong {
+  color: #1f2937;
+  padding: 3px 0;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+  display: block;
+  text-align: center;
+  margin: 2px 0;
 }
 
 .navigation-button {
@@ -387,42 +605,46 @@ li p:hover,
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
-  padding: 10px;
+  padding: 8px;
   cursor: pointer;
   z-index: 10;
 }
 
+.notification-list {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.notification-item {
+  flex: 0 0 32%;
+  /* Mỗi thông báo chiếm 1/3 chiều rộng */
+  margin-right: 10px;
+}
+
+.slideshow-container {
+  overflow: hidden;
+}
+
 #previous-button {
-  left: 10px;
+  left: 0px;
 }
 
 #next-button {
-  right: 10px;
+  right: 0px;
 }
 
 .navigation-button:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
 }
-
-.image-list strong {
-  padding: 10px 0;
-  font-size: 18px;
-  letter-spacing: -0.5px;
-  display: block;
-  text-align: center;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
 
 .main {
-  width: 70%;
+  width: 65%;
   /* Chiều rộng của phần chính */
 }
 
 .right-section {
   flex: 1;
-  width: 30%;
+  width: 100%;
   margin-bottom: auto;
   margin-left: 20px;
   /* Khoảng cách giữa phần chính và khối bên phải */
@@ -434,7 +656,7 @@ li p:hover,
 }
 
 .notification-item {
-  width: 30%;
+  width: 100%;
   /* Chia đều cho 3 phần */
   text-align: center;
   /* Căn giữa nội dung trong mỗi phần */
@@ -452,7 +674,7 @@ li p:hover,
   padding: 20px;
   margin: 20px auto;
   /* Giữa trang */
-  max-width: 240px;
+  max-width: 300px;
   /* Giới hạn chiều rộng */
   text-align: center;
   /* Căn giữa toàn bộ nội dung */
