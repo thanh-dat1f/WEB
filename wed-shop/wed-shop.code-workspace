@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../WEB/wed-shop"
+		},
+		{
+			"path": "../../WEB/WEB"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "wed-shop"
+	}
+}
