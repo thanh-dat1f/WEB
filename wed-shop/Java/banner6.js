@@ -1,40 +1,28 @@
-let currentIndex = 0;
-const slides = document.querySelectorAll('.notification-item');
-const totalSlides = slides.length;
-const slidesToShow = 3; // Hiển thị 3 thông báo một lần
-const slideWidth = 100 / slidesToShow; // Tính phần trăm chiều rộng cho mỗi thông báo
+const container = document.querySelector('.notification-list');
+const notifications = Array.from(container.children);
+const visibleItems = 3; // Số lượng thông báo hiển thị mỗi lần
+const notificationWidth = 260; // Chiều rộng của mỗi thông báo (phù hợp với CSS)
+const slideAmount = visibleItems * notificationWidth; // Khoảng cách dịch chuyển mỗi lần
+let currentOffset = 0;
 
-document.querySelector('.notification-list').style.width = `${totalSlides * slideWidth}%`; // Cài đặt chiều rộng cho danh sách
-
-// Hàm hiển thị thông báo hiện tại
-function showSlides() {
-    const list = document.querySelector('.notification-list');
-    list.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+function updateSlide() {
+    container.style.transform = `translateX(${currentOffset}px)`;
 }
 
-// Nút chuyển tiếp
-function nextSlide() {
-    if (currentIndex < totalSlides - slidesToShow) {
-        currentIndex++;
+document.getElementById('next-button').addEventListener('click', () => {
+    if (Math.abs(currentOffset) + slideAmount < notifications.length * notificationWidth) {
+        currentOffset -= slideAmount;
     } else {
-        currentIndex = 0; // Quay lại đầu nếu đã đến cuối danh sách
+        currentOffset = 0; // Quay lại đầu nếu hết phần tử
     }
-    showSlides();
-}
+    updateSlide();
+});
 
-// Nút quay lại
-function prevSlide() {
-    if (currentIndex > 0) {
-        currentIndex--;
+document.getElementById('previous-button').addEventListener('click', () => {
+    if (currentOffset < 0) {
+        currentOffset += slideAmount;
     } else {
-        currentIndex = totalSlides - slidesToShow; // Quay lại cuối danh sách nếu đang ở đầu
+        currentOffset = -(notifications.length * notificationWidth - slideAmount); // Đến phần tử cuối
     }
-    showSlides();
-}
-
-// Gắn sự kiện click cho nút điều hướng
-document.getElementById('next-button').addEventListener('click', nextSlide);
-document.getElementById('previous-button').addEventListener('click', prevSlide);
-
-// Hiển thị slide đầu tiên khi tải trang
-showSlides();
+    updateSlide();
+});
