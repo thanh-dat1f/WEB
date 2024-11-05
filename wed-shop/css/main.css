@@ -109,9 +109,14 @@ li p:hover,
   color: #ffffff;
 }
 
+li strong:hover,
+.dropdown:hover .dropbtn {
+  background-color: #004233;
+  color: #ffffff;
+}
+
 .dropdown {
   position: relative;
-  /* Đảm bảo nút dropbtn là phần tử cha */
 }
 
 .dropdown-content {
@@ -168,7 +173,7 @@ li p:hover,
 }
 
 .dropdown-content a:hover {
-  background-color: black;
+  background-color: black !important;
   padding-left: 10px;
 }
 
