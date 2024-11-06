@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 body {
     background-color: #F3F4F6;
     font-family: Arial, sans-serif;
@@ -218,6 +219,8 @@ li strong:hover,
     }
 }
 
+=======
+>>>>>>> Stashed changes
 .grid-container {
     display: flex;
     width: 1260px;
@@ -385,6 +388,7 @@ a img {
 
 .fourendtext {
     margin: 15px 5px 5px 5px;
+<<<<<<< Updated upstream
 }
 
 .container {
@@ -467,4 +471,6 @@ footer p {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+=======
+>>>>>>> Stashed changes
 }
