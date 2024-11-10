@@ -688,7 +688,7 @@ li strong:hover,
 }
 
 .intro h2 {
-  font-size: 20px;
+  font-size: 20px !important;
   color: #446084;
   text-align: left;
   /* Căn giữa tiêu đề */
