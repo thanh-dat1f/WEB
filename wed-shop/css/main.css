@@ -14,10 +14,6 @@ header {
   align-items: center;
 }
 
-header a {
-  margin: 0;
-}
-
 header h1 {
   margin: 0;
   font-size: 20px;
@@ -60,7 +56,6 @@ header .hotline p {
   border-radius: 32px;
   margin-left: 150px;
   display: inline-block;
-  /* Đảm bảo button là một khối nội tuyến */
 }
 
 nav {
@@ -98,17 +93,7 @@ li a,
 }
 
 li a:hover,
-.dropdown:hover .dropbtn {
-  background-color: #004233;
-  color: #ffffff;
-}
-
 li p:hover,
-.dropdown:hover .dropbtn {
-  background-color: #004233;
-  color: #ffffff;
-}
-
 li strong:hover,
 .dropdown:hover .dropbtn {
   background-color: #004233;
@@ -124,12 +109,23 @@ li strong:hover,
   position: absolute;
   background-color: #ffffff;
   min-width: 800px;
-  min-height: fit-content;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
   padding: 20px;
   border-radius: 10px;
   opacity: 0;
+}
+
+.dropdown-content .column p,
+.dropdown-content p,
+.dropdown-content a {
+  font-size: 13px;
+  color: #333;
+  padding: 8px 0;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  transition: background-color 0.3s, padding-left 0.3s;
 }
 
 .dropdown-content .column p {
@@ -139,18 +135,10 @@ li strong:hover,
   padding-bottom: 5px;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .dropdown-content .column {
   float: left;
   width: 25%;
-  /* Giảm kích thước cột */
   padding: 10px 15px;
-  /* Điều chỉnh padding giữa các cột */
   box-sizing: border-box;
 }
 
@@ -162,35 +150,15 @@ li strong:hover,
   padding-bottom: 5px;
 }
 
-.dropdown-content a {
-  font-size: 13px;
-  color: #333;
-  padding: 8px 0;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-  transition: background-color 0.3s, padding-left 0.3s;
-}
-
-.dropdown-content a:hover {
-  background-color: black !important;
-  padding-left: 10px;
-}
-
-.dropdown-content p {
-  font-size: 13px;
-  font-weight: bold;
-  color: #333;
-  padding: 8px 0;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-  transition: background-color 0.3s, padding-left 0.3s;
-}
-
+.dropdown-content a:hover,
 .dropdown-content p:hover {
   background-color: black;
   padding-left: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
 }
 
 .clearfix::after {
@@ -217,7 +185,6 @@ li strong:hover,
     padding: 12px 10px;
   }
 }
-
 
 
 .banner {
