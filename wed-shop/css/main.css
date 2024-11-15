@@ -273,7 +273,6 @@ li strong:hover,
   display: flex;
   transition: transform 0.7s ease-in-out;
   gap: 10px;
-  /* Khoảng cách giữa các hình */
 }
 
 .list-imgs2 img {
@@ -292,7 +291,6 @@ li strong:hover,
   color: white;
   border: none;
   padding: 8px;
-  /* Giảm padding cho nút */
   cursor: pointer;
   z-index: 10;
 }
@@ -313,19 +311,16 @@ li strong:hover,
   font-size: 14px;
   color: #777777;
   margin: 2px 0;
-  /* Giảm khoảng cách trên và dưới của thẻ p */
 }
 
 .list-imgs2 strong {
   color: #1f2937;
   padding: 3px 0;
-  /* Giảm khoảng cách trên dưới cho nội dung strong */
   font-size: 16px;
   letter-spacing: -0.5px;
   display: block;
   text-align: center;
   margin: 2px 0;
-  /* Giảm khoảng cách trên và dưới của thẻ strong */
 }
 
 .banner3 {
